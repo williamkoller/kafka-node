@@ -1,0 +1,24 @@
+{
+  "name": "kafka-node",
+  "version": "1.0.0",
+  "description": "Kafka js Nodejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "producer": "node src/producer.js",
+    "consumer": "node src/consumer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4"
+  }
+}
