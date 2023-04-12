@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 services:
   kafka:
@@ -6,7 +6,7 @@ services:
     container_name: kafka
     restart: on-failure
     ports:
-      - "9092:9092"
+      - '9092:9092'
     environment:
       - KAFKA_CFG_BROKER_ID=1
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
@@ -14,7 +14,7 @@ services:
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_CFG_NUM_PARTITIONS=3
       - ALLOW_PLAINTEXT_LISTENER=yes
-      - KAFKA_CREATE_TOPICS=
+      - KAFKA_CREATE_TOPICS=DEMO_TOPIC
     depends_on:
       - zookeeper
 
@@ -22,6 +22,6 @@ services:
     image: bitnami/zookeeper:latest
     container_name: zookeeper
     ports:
-      - "2181:2181"
+      - '2181:2181'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
